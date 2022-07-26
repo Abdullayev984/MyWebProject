@@ -1,0 +1,72 @@
+﻿@model UserToListDTO
+
+@{ Layout = null; }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://codepen.io/skjha5993/pen/bXqWpR.css">
+
+    <title>Registration</title>
+</head>
+<body>
+
+    <div class="container">
+        <form asp-controller="Register" asp-action="ToRegister" method="post">
+            <h2 class="text-center">Join Our Network</h2>
+            <div class="form-group">
+
+                <label>UserName</label>
+                <input type="text" asp-for="UserName" class="form-control" id="name" placeholder="Enter UserName...">
+
+
+            </div>
+
+            <div class="form-group">
+                <label>UserPassword</label>
+                <input type="password" asp-for="UserPassword" class="form-control" id="name" placeholder="Enter UserPassword...">
+
+
+            </div>
+            <br />
+            <div class="form-group">
+                <label>ConfirmPassword</label>
+                <input type="password" asp-for="ConfirmPassword" class="form-control" id="name" placeholder="Re Enter UserPassword...">
+
+
+            </div>
+
+
+
+
+
+            @section scripts {
+
+                <script type="text/javascript">
+
+
+
+
+
+                    alert('You clicked ');
+
+
+
+
+
+                </script>
+
+            }
+            <button class="btn btn-primary float-right" id="btn">Submit</button>
+        </form>
+    </div>
+   
+
+</body>
+</html>
+
+
+

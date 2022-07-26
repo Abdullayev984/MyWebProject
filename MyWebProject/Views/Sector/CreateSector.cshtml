@@ -1,0 +1,22 @@
+﻿@model SectorToListDTO
+
+
+<form asp-controller="Sector" asp-action="AddSector" method="post">
+
+    <div class="form-group">
+
+        <input type="text" asp-for="SectorId" class="form-control" id="name"  hidden >
+    </div>
+    <div class="form-group">
+        <label>SectorName</label>
+        <input type="text" asp-for="SectorName" class="form-control" id="name" placeholder="Enter SectorName...">
+        <span asp-validation-for="SectorName" style="color:red"></span>
+    </div>
+
+    <div class="form-group">
+        <label>DepartmentName</label>
+        @Html.DropDownListFor(x=>x.DepartmentId, (List<SelectListItem>)ViewBag.dgr1, new { @class = "form-control" })
+    </div>
+   
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
